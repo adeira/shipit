@@ -1,0 +1,357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches expected output: chmod.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/src/platform/terraform-gitlab-project-cluster/environment_scope.sh b/src/platform/terraform-gitlab-project-cluster/environment_scope.sh
+old mode 100644
+new mode 100755
+--
+2.20.1 (Apple Git-117)
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/src/platform/terraform-gitlab-project-cluster/environment_scope.sh b/src/platform/terraform-gitlab-project-cluster/environment_scope.sh
+old mode 100644
+new mode 100755
+--
+2.20.1 (Apple Git-117)
+
+
+
+`;
+
+exports[`matches expected output: diff-in-diff.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/unicode.txt b/unicode.txt
+index 1f60525b30fedbea3660714fb6198053f3457168..485cb7f13081f005c2f83890e155c0fcf4b16cd6 100644
+--- a/unicode.txt
++++ b/unicode.txt
+@@ -1,6 +1,16 @@
+-Apostrophe: don’t
+-Emoji: 🍺 🍻 🍷 🍸😀 😬 😁 😂 😃 😄 😅
+-Russian: Все люди рождаются свободными и равными в своем достоинстве и правах.
+-Japanese: すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。
+-Arabic: يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
+-Chinese (traditional): 人人生而自由，在尊嚴和權利上一律平等。
++diff --git a/unicode.txt b/unicode.txt
++new file mode 100644
++index 0000000000000000000000000000000000000000..1f60525b30fedbea3660714fb6198053f3457168
++--- /dev/null
+++++ b/unicode.txt
++@@ -0,0 +1,6 @@
+++Apostrophe: don’t
+++Emoji: 🍺 🍻 🍷 🍸😀 😬 😁 😂 😃 😄 😅
+++Russian: Все люди рождаются свободными и равными в своем достоинстве и правах.
+++Japanese: すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。
+++Arabic: يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
+++Chinese (traditional): 人人生而自由，在尊嚴和權利上一律平等。
++--
++2.21.0
++
++
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/unicode.txt b/unicode.txt
+index 1f60525b30fedbea3660714fb6198053f3457168..485cb7f13081f005c2f83890e155c0fcf4b16cd6 100644
+--- a/unicode.txt
++++ b/unicode.txt
+@@ -1,6 +1,16 @@
+-Apostrophe: don’t
+-Emoji: 🍺 🍻 🍷 🍸😀 😬 😁 😂 😃 😄 😅
+-Russian: Все люди рождаются свободными и равными в своем достоинстве и правах.
+-Japanese: すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。
+-Arabic: يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
+-Chinese (traditional): 人人生而自由，在尊嚴和權利上一律平等。
++diff --git a/unicode.txt b/unicode.txt
++new file mode 100644
++index 0000000000000000000000000000000000000000..1f60525b30fedbea3660714fb6198053f3457168
++--- /dev/null
+++++ b/unicode.txt
++@@ -0,0 +1,6 @@
+++Apostrophe: don’t
+++Emoji: 🍺 🍻 🍷 🍸😀 😬 😁 😂 😃 😄 😅
+++Russian: Все люди рождаются свободными и равными в своем достоинстве и правах.
+++Japanese: すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。
+++Arabic: يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
+++Chinese (traditional): 人人生而自由，在尊嚴和權利上一律平等。
++--
++2.21.0
++
++
+
+`;
+
+exports[`matches expected output: file-delete.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/bbb.txt b/bbb.txt
+deleted file mode 100644
+index dbee0265d31298531773537e6e37e4fd1ee71d62..0000000000000000000000000000000000000000
+--- a/bbb.txt
++++ /dev/null
+@@ -1,2 +0,0 @@
+-aaa
+-bbb
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/bbb.txt b/bbb.txt
+deleted file mode 100644
+index dbee0265d31298531773537e6e37e4fd1ee71d62..0000000000000000000000000000000000000000
+--- a/bbb.txt
++++ /dev/null
+@@ -1,2 +0,0 @@
+-aaa
+-bbb
+
+`;
+
+exports[`matches expected output: file-modify-no-eol.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/aaa.txt b/aaa.txt
+index 72943a16fb2c8f38f9dde202b7a70ccc19c52f34..01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d 100644
+--- a/aaa.txt
++++ b/aaa.txt
+@@ -1 +1 @@
+-aaa
++bbb
+\\ No newline at end of file
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/aaa.txt b/aaa.txt
+index 72943a16fb2c8f38f9dde202b7a70ccc19c52f34..01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d 100644
+--- a/aaa.txt
++++ b/aaa.txt
+@@ -1 +1 @@
+-aaa
++bbb
+\\ No newline at end of file
+
+`;
+
+exports[`matches expected output: file-new.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/aaa.txt b/aaa.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..72943a16fb2c8f38f9dde202b7a70ccc19c52f34
+--- /dev/null
++++ b/aaa.txt
+@@ -0,0 +1 @@
++aaa
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/aaa.txt b/aaa.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..72943a16fb2c8f38f9dde202b7a70ccc19c52f34
+--- /dev/null
++++ b/aaa.txt
+@@ -0,0 +1 @@
++aaa
+
+`;
+
+exports[`matches expected output: file-rename.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/aaa.txt b/aaa.txt
+deleted file mode 100644
+index 01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d..0000000000000000000000000000000000000000
+--- a/aaa.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-bbb
+\\ No newline at end of file
+diff --git a/bbb.txt b/bbb.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d
+--- /dev/null
++++ b/bbb.txt
+@@ -0,0 +1 @@
++bbb
+\\ No newline at end of file
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/aaa.txt b/aaa.txt
+deleted file mode 100644
+index 01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d..0000000000000000000000000000000000000000
+--- a/aaa.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-bbb
+\\ No newline at end of file
+
+~~~ HUNK 2:
+
+diff --git a/bbb.txt b/bbb.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d
+--- /dev/null
++++ b/bbb.txt
+@@ -0,0 +1 @@
++bbb
+\\ No newline at end of file
+
+`;
+
+exports[`matches expected output: files-modify.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/bbb.txt b/bbb.txt
+index 01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d..dbee0265d31298531773537e6e37e4fd1ee71d62 100644
+--- a/bbb.txt
++++ b/bbb.txt
+@@ -1 +1,2 @@
+-bbb
+\\ No newline at end of file
++aaa
++bbb
+diff --git a/ccc.txt b/ccc.txt
+index b2a7546679fdf79ca0eb7bfbee1e1bb342487380..66bde67332bef8dfb2c70698c51bf37b80b73ef3 100644
+--- a/ccc.txt
++++ b/ccc.txt
+@@ -1 +1,2 @@
+ ccc
++ddd
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/bbb.txt b/bbb.txt
+index 01f02e32ce8a128dd7b1d16a45f2eff66ec23c2d..dbee0265d31298531773537e6e37e4fd1ee71d62 100644
+--- a/bbb.txt
++++ b/bbb.txt
+@@ -1 +1,2 @@
+-bbb
+\\ No newline at end of file
++aaa
++bbb
+
+~~~ HUNK 2:
+
+diff --git a/ccc.txt b/ccc.txt
+index b2a7546679fdf79ca0eb7bfbee1e1bb342487380..66bde67332bef8dfb2c70698c51bf37b80b73ef3 100644
+--- a/ccc.txt
++++ b/ccc.txt
+@@ -1 +1,2 @@
+ ccc
++ddd
+
+`;
+
+exports[`matches expected output: lfs-removal.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/.yarn/cache/@kiwicom-js-0.9.0.tgz b/.yarn/cache/@kiwicom-js-0.9.0.tgz
+deleted file mode 100644
+index f2572f9c9d2f2ab4f2a61695a09ee50430f8ccbe..0000000000000000000000000000000000000000
+--- a/.yarn/cache/@kiwicom-js-0.9.0.tgz
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:389a46fe92555e912f515578f718f546e58a0c9b81174a66068a35211d5e54ff
+-size 4330
+--
+2.20.1 (Apple Git-117)
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/.yarn/cache/@kiwicom-js-0.9.0.tgz b/.yarn/cache/@kiwicom-js-0.9.0.tgz
+deleted file mode 100644
+index f2572f9c9d2f2ab4f2a61695a09ee50430f8ccbe..0000000000000000000000000000000000000000
+--- a/.yarn/cache/@kiwicom-js-0.9.0.tgz
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:389a46fe92555e912f515578f718f546e58a0c9b81174a66068a35211d5e54ff
+-size 4330
+
+`;
+
+exports[`matches expected output: nasty.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/nasty.txt b/nasty.txt
+index 044b936071f4da77efec5b15794785ecde6b6791..e316f565a5386462ecbfd01d245888570a00ca85 100644
+--- a/nasty.txt
++++ b/nasty.txt
+@@ -1 +1 @@
+--- a/nasty.txt
++++ b/nasty.txt
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/nasty.txt b/nasty.txt
+index 044b936071f4da77efec5b15794785ecde6b6791..e316f565a5386462ecbfd01d245888570a00ca85 100644
+--- a/nasty.txt
++++ b/nasty.txt
+@@ -1 +1 @@
+--- a/nasty.txt
++++ b/nasty.txt
+
+`;
+
+exports[`matches expected output: unicode.patch 1`] = `
+~~~~~~~~~~ INPUT ~~~~~~~~~~
+diff --git a/unicode.txt b/unicode.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..1f60525b30fedbea3660714fb6198053f3457168
+--- /dev/null
++++ b/unicode.txt
+@@ -0,0 +1,6 @@
++Apostrophe: don’t
++Emoji: 🍺 🍻 🍷 🍸😀 😬 😁 😂 😃 😄 😅
++Russian: Все люди рождаются свободными и равными в своем достоинстве и правах.
++Japanese: すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。
++Arabic: يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
++Chinese (traditional): 人人生而自由，在尊嚴和權利上一律平等。
+--
+2.21.0
+
+
+~~~~~~~~~~ OUTPUT ~~~~~~~~~~
+~~~ HUNK 1:
+
+diff --git a/unicode.txt b/unicode.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..1f60525b30fedbea3660714fb6198053f3457168
+--- /dev/null
++++ b/unicode.txt
+@@ -0,0 +1,6 @@
++Apostrophe: don’t
++Emoji: 🍺 🍻 🍷 🍸😀 😬 😁 😂 😃 😄 😅
++Russian: Все люди рождаются свободными и равными в своем достоинстве и правах.
++Japanese: すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。
++Arabic: يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق.
++Chinese (traditional): 人人生而自由，在尊嚴和權利上一律平等。
+
+`;
